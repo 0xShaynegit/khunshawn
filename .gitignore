@@ -1,0 +1,80 @@
+# Backup & Archive
+_backup/
+old-index/
+_raw/
+
+# Reference & Research
+strategy/
+template/
+pages/
+
+# Build & Dependency Files
+node_modules/
+dist/
+build/
+.cache/
+
+# Editor & IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Environment & Secrets
+.env
+.env.local
+.env.*.local
+
+# OS Files
+Thumbs.db
+.Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+
+# Temporary Files
+*.tmp
+*.temp
+*.bak
+
+# Extracted/Downloaded Assets (cache)
+.firecrawl/
+EXTRACTED_ASSETS.md
+EXTRACTION_SUMMARY.txt
+DIRECT_DOWNLOAD_URLS.txt
+ASSET_MANIFEST.csv
+IMAGE_MAPPING.txt
+download-assets.sh
+websiteexport.md
+
+# Analysis & Documentation (reference only)
+ANIMATIONS_ANALYSIS.md
+ANIMATIONS_IMPLEMENTATION_STRATEGY.md
+ANIMATIONS_QUICK_REFERENCE.md
+ANIMATIONS_SUMMARY.txt
+ASSETS_INDEX.md
+README_ANIMATIONS.md
+README_EXTRACTION.md
+
+# Backup Copies
+index.html.backup
+index.html.broken
+
+# Wrangler (local development)
+wrangler.jsonc
+.wrangler/
+
+# Keep in git:
+# index.html
+# styles/
+# scripts/
+# images/
+# fonts/
+# assets/
+# robots.txt
+# sitemap.xml
+# .gitignore
