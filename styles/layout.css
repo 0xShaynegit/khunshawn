@@ -1,0 +1,175 @@
+/* ========================================
+   LAYOUT.CSS - Grid, Sections, Spacing
+   ======================================== */
+
+/* Grid System */
+.grid {
+  display: grid;
+  gap: var(--spacing-xl);
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-xl);
+}
+
+.grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--spacing-xl);
+}
+
+@media (max-width: 1024px) {
+  .grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .grid-2,
+  .grid-4 {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Flexbox Utilities */
+.flex {
+  display: flex;
+  gap: var(--spacing-lg);
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-lg);
+}
+
+.flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-lg);
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+/* Sections */
+section {
+  padding: var(--section-padding-desktop);
+  border-bottom: 1px solid var(--accent-subtle);
+}
+
+section:last-of-type {
+  border-bottom: none;
+}
+
+@media (max-width: 768px) {
+  section {
+    padding: var(--section-padding-mobile);
+  }
+}
+
+/* Section Header (h2 + optional subtitle) */
+.section-header {
+  margin-bottom: var(--spacing-2xl);
+  text-align: center;
+}
+
+.section-header h2 {
+  margin-bottom: var(--spacing-md);
+}
+
+.section-header p {
+  font-size: 18px;
+  color: var(--text-secondary);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Hero Section */
+#hero {
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  border-bottom: none;
+}
+
+#hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('images/Khun\ Shawn\ at\ gaming\ desk\ with\ monitors\ khun-shawn\ khunshawn.webp');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  opacity: 0.3;
+  z-index: 0;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  max-width: 800px;
+  padding: var(--spacing-2xl);
+}
+
+.hero-content h1 {
+  margin-bottom: var(--spacing-md);
+  animation: fadeInUp 0.8s ease 0.2s both;
+}
+
+.hero-content p {
+  font-size: 20px;
+  color: var(--text-secondary);
+  margin-bottom: var(--spacing-2xl);
+  animation: fadeInUp 0.8s ease 0.4s both;
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-lg);
+}
+
+/* Responsive Padding */
+@media (max-width: 768px) {
+  section {
+    padding: var(--section-padding-tablet);
+  }
+}
+
+@media (max-width: 480px) {
+  section {
+    padding: var(--section-padding-mobile);
+  }
+
+  .hero-content {
+    padding: var(--spacing-lg);
+  }
+
+  .hero-content h1 {
+    font-size: 32px;
+  }
+
+  .hero-content p {
+    font-size: 16px;
+  }
+}
+
+/* Breakpoint Reference */
+/* Mobile: 360px - 767px */
+/* Tablet: 768px - 1023px */
+/* Desktop: 1024px+ */
