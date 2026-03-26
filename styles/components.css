@@ -1,0 +1,244 @@
+/* ========================================
+   COMPONENTS.CSS - Buttons, Cards, Timeline
+   ======================================== */
+
+/* Primary CTA Button */
+.btn-primary {
+  display: inline-block;
+  background-color: var(--accent-neon);
+  color: var(--text-primary);
+  padding: 16px 32px;
+  border-radius: var(--radius-md);
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  border: none;
+  cursor: pointer;
+  transition: all var(--transition-normal);
+  box-shadow: 0 0 16px var(--accent-glow);
+  text-decoration: none;
+}
+
+.btn-primary:hover {
+  box-shadow: 0 0 24px var(--accent-glow);
+  transform: translateY(-2px);
+}
+
+.btn-primary:focus-visible {
+  outline: 2px solid var(--accent-lime);
+  outline-offset: 2px;
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+/* Secondary Button (Link style) */
+.btn-secondary {
+  color: var(--accent-neon);
+  text-decoration: underline;
+  transition: color var(--transition-normal);
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: inherit;
+}
+
+.btn-secondary:hover {
+  color: var(--accent-lime);
+}
+
+/* Capability Card */
+.card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--accent-subtle);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-2xl);
+  transition: all var(--transition-normal);
+}
+
+.card:hover {
+  border-left: 4px solid var(--accent-lime);
+  box-shadow: 0 0 20px var(--lime-glow);
+}
+
+.card-icon {
+  width: 40px;
+  height: 40px;
+  margin-bottom: var(--spacing-lg);
+  color: var(--accent-neon);
+  font-size: 28px;
+}
+
+.card-title {
+  font-family: var(--font-serif);
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-md);
+}
+
+.card-description {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+/* Timeline (Steps) */
+.timeline {
+  position: relative;
+  padding: var(--spacing-xl) 0;
+}
+
+.timeline-step {
+  display: flex;
+  margin-bottom: var(--spacing-2xl);
+  gap: var(--spacing-xl);
+  animation: fadeInUp 0.6s ease both;
+}
+
+.timeline-step:nth-child(1) { animation-delay: 0s; }
+.timeline-step:nth-child(2) { animation-delay: 0.1s; }
+.timeline-step:nth-child(3) { animation-delay: 0.2s; }
+.timeline-step:nth-child(4) { animation-delay: 0.3s; }
+.timeline-step:nth-child(5) { animation-delay: 0.4s; }
+
+.timeline-circle {
+  width: 48px;
+  height: 48px;
+  background-color: var(--bg-primary);
+  border: 2px solid var(--accent-neon);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: 20px;
+  color: var(--text-primary);
+  flex-shrink: 0;
+  animation: scaleIn 0.4s ease both;
+}
+
+.timeline-step:nth-child(1) .timeline-circle { animation-delay: 0s; }
+.timeline-step:nth-child(2) .timeline-circle { animation-delay: 0.1s; }
+.timeline-step:nth-child(3) .timeline-circle { animation-delay: 0.2s; }
+.timeline-step:nth-child(4) .timeline-circle { animation-delay: 0.3s; }
+.timeline-step:nth-child(5) .timeline-circle { animation-delay: 0.4s; }
+
+.timeline-content {
+  flex: 1;
+  padding-top: var(--spacing-sm);
+  animation: fadeInUp 0.6s ease both;
+}
+
+.timeline-step:nth-child(1) .timeline-content { animation-delay: 0.1s; }
+.timeline-step:nth-child(2) .timeline-content { animation-delay: 0.2s; }
+.timeline-step:nth-child(3) .timeline-content { animation-delay: 0.3s; }
+.timeline-step:nth-child(4) .timeline-content { animation-delay: 0.4s; }
+.timeline-step:nth-child(5) .timeline-content { animation-delay: 0.5s; }
+
+.timeline-title {
+  font-family: var(--font-serif);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-sm);
+}
+
+.timeline-description {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+/* Timeline Connector Line */
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 23px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background-color: var(--accent-lime);
+  opacity: 0.5;
+}
+
+/* Stat Block (for Proof section) */
+.stat-block {
+  text-align: center;
+  animation: fadeInUp 0.6s ease both;
+}
+
+.stat-number {
+  font-family: var(--font-mono);
+  font-size: clamp(28px, 6vw, 48px);
+  font-weight: 700;
+  color: var(--accent-lime);
+  margin-bottom: var(--spacing-sm);
+  counter-set: stat-count 0;
+}
+
+.stat-label {
+  font-size: 12px;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Testimonial Block */
+.testimonial {
+  background-color: var(--bg-card);
+  border-left: 3px solid var(--accent-neon);
+  padding: var(--spacing-xl);
+  border-radius: var(--radius-md);
+  margin-top: var(--spacing-xl);
+  animation: fadeInUp 0.6s ease both;
+}
+
+.testimonial-quote {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 18px;
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-lg);
+  line-height: 1.6;
+}
+
+.testimonial-author {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--accent-neon);
+  margin-bottom: var(--spacing-xs);
+}
+
+.testimonial-role {
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+  .btn-primary {
+    padding: 14px 28px;
+    font-size: 13px;
+  }
+
+  .card {
+    padding: var(--spacing-lg);
+  }
+
+  .timeline-step {
+    gap: var(--spacing-lg);
+  }
+
+  .timeline::before {
+    left: 15px;
+  }
+
+  .stat-number {
+    font-size: 32px;
+  }
+}

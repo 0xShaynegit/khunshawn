@@ -1,0 +1,180 @@
+/* ========================================
+   ANIMATIONS.CSS - Keyframes & Utilities
+   ======================================== */
+
+/* Fade In animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Scale animations */
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Glitch effect (Hero headline) */
+@keyframes glitch {
+  0% {
+    transform: translate(0);
+  }
+  20% {
+    transform: translate(-2px, 2px);
+  }
+  40% {
+    transform: translate(-2px, -2px);
+  }
+  60% {
+    transform: translate(2px, 2px);
+  }
+  80% {
+    transform: translate(2px, -2px);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+
+/* Glow animations */
+@keyframes glowPulse {
+  0%, 100% {
+    box-shadow: 0 0 16px rgba(138, 12, 172, 0.6);
+  }
+  50% {
+    box-shadow: 0 0 24px rgba(138, 12, 172, 0.8);
+  }
+}
+
+@keyframes limePulse {
+  0%, 100% {
+    box-shadow: 0 0 16px rgba(44, 255, 5, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 24px rgba(44, 255, 5, 0.5);
+  }
+}
+
+/* Stroke animation for timeline line */
+@keyframes strokeDraw {
+  from {
+    stroke-dashoffset: 1000;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* Parallax effect on hero background */
+@keyframes parallaxShift {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-30px);
+  }
+}
+
+/* Utility Animation Classes */
+.animate-fade-in {
+  animation: fadeIn 0.6s ease;
+  will-change: opacity;
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease;
+  will-change: opacity, transform;
+}
+
+.animate-fade-in-down {
+  animation: fadeInDown 0.6s ease;
+  will-change: opacity, transform;
+}
+
+.animate-scale-in {
+  animation: scaleIn 0.4s ease;
+  will-change: opacity, transform;
+}
+
+.animate-glitch {
+  animation: glitch 0.3s ease 1;
+  will-change: transform;
+}
+
+.animate-glow {
+  animation: glowPulse 2s ease-in-out infinite;
+  will-change: box-shadow;
+}
+
+.animate-lime-glow {
+  animation: limePulse 2s ease-in-out infinite;
+  will-change: box-shadow;
+}
+
+/* Scroll-triggered animations (applied via JS) */
+.reveal {
+  opacity: 0;
+  will-change: opacity, transform;
+}
+
+.reveal.in-view {
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+/* Parallax utility */
+.parallax {
+  will-change: transform;
+}
+
+/* Counter animation for stats */
+.counter {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Mobile animation reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Performance optimization */
+.gpu-accelerate {
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}

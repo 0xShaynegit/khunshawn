@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://khun-shawn.com/sitemap.xml
