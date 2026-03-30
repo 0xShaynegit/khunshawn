@@ -65,9 +65,9 @@ README_EXTRACTION.md
 index.html.backup
 index.html.broken
 
-# Wrangler (local development)
-# wrangler.jsonc          # TRACKED - needed for Cloudflare Pages deployment
+# Build & Development
 .wrangler/
+dist/
 
 # ============================================================
 # TRACKED FILES (explicitly kept in git)
