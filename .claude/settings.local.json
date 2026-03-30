@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mv CSR84z9ShvucWzsMKyhdTOI.woff2 Lusitana-400.woff2)",
+      "Bash(mv CSR74z9ShvucWzsMKyDmafctaNY.woff2 Lusitana-700.woff2)",
+      "Bash(mv S6uyw4BMUTPHjx4wXg.woff2 Lato-400.woff2)",
+      "Bash(mv S6u9w4BMUTPHh6UVSwiPGQ.woff2 Lato-700.woff2)",
+      "Bash(cd:*)",
+      "Bash(grep -E '\\\\.\\(md|xml|txt|example\\)$')",
+      "Skill(commit-commands:commit-push-pr)",
+      "Skill(commit-commands:commit)"
+    ]
+  }
+}
