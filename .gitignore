@@ -93,3 +93,7 @@ wrangler.jsonc
 # Build/Deployment:
 # _deployment/
 # .github/workflows/
+
+.dev.vars*
+!.dev.vars.example
+!.env.example
