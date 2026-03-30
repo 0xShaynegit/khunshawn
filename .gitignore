@@ -35,6 +35,7 @@ Thumbs.db
 *.log
 npm-debug.log*
 yarn-debug.log*
+pnpm-debug.log*
 
 # Temporary Files
 *.tmp
@@ -65,16 +66,30 @@ index.html.backup
 index.html.broken
 
 # Wrangler (local development)
-wrangler.jsonc
+# wrangler.jsonc          # TRACKED - needed for Cloudflare Pages deployment
 .wrangler/
 
-# Keep in git:
+# ============================================================
+# TRACKED FILES (explicitly kept in git)
+# ============================================================
+# Core site files:
 # index.html
-# styles/
-# scripts/
+# pages/
+# css/
+# js/
 # images/
-# fonts/
 # assets/
+# fonts/
+# mp3/
+# md/
+
+# SEO & Config:
 # robots.txt
 # sitemap.xml
 # .gitignore
+# README.md
+# .env.example
+
+# Build/Deployment:
+# _deployment/
+# .github/workflows/
